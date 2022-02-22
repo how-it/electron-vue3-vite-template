@@ -1,0 +1,20 @@
+# Reference:
+# https://www.electron.build/configuration/configuration
+
+appId: "com.github.how-it.electron-vue3-vite-template" # 包名
+productName: "Template" # 项目名
+directories:
+  output: "output" # 输出文件夹
+
+nsis:
+  shortcutName: "Template" # 图标名称
+  artifactName: "template-setup.${ext}" # 安装包名
+  oneClick: false # 是否一键安装
+  allowToChangeInstallationDirectory: true # 允许修改安装目录
+  createDesktopShortcut: true # 创建桌面图标
+  createStartMenuShortcut: true # 创建开始菜单图标
+
+win:
+  icon: "public/favicon.ico"
+  target:
+    - { target: "nsis" } # 打包成安装包

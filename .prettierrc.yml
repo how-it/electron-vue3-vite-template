@@ -1,0 +1,14 @@
+# Reference:
+# https://prettier.io/docs/en/options.html
+
+semi: false
+singleQuote: true
+trailingComma: "none" # <es5|none|all>
+arrowParens: "avoid" # <always|avoid>
+
+overrides:
+  - files:
+      - "*.yml"
+      - "*.yaml"
+    options:
+      singleQuote: false

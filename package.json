@@ -1,0 +1,37 @@
+{
+  "name": "electron-vue3-vite-template",
+  "version": "0.1.0",
+  "author": "how-it",
+  "description": "A template for electron + vue 3 + vite",
+  "license": "GPL-3.0",
+  "main": "src/main/main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run render:dev\" \"npm run electron:dev\"",
+    "build": "npm run render:build && npm run electron:build",
+    "render:dev": "vite",
+    "render:build": "vue-tsc --noEmit && vite build",
+    "electron:dev": "electron .",
+    "electron:build": "electron-builder --win",
+    "preview": "vite preview",
+    "commit": "git cz"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "commitizen": "^4.2.4",
+    "concurrently": "^7.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "electron": "16.0.6",
+    "electron-builder": "^22.14.5",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vue-tsc": "^0.29.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
